@@ -1,0 +1,24 @@
+<div class="login-container">
+  <img src="../../../assets/img/film.png" alt="film" class="film-img">
+  <div class="login-1">
+    Rotten Movies
+  </div>
+  <div class="login-description">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, aperiam voluptatem consectetur quas numquam sint minima praesentium, ipsam omnis explicabo amet sunt maiores quibusdam eius libero nam quasi facere error.
+  </div>
+    <div class="login-form">
+      <div class="form-group">
+        <label for="userName" class="username-label">User Name</label>
+        <input type="text" class="form-control" name="userName" [(ngModel)]="userName">
+      </div>
+      <div class="form-group">
+        <label for="psword" class="userPassword-label">Password</label>
+        <input type="text" class="form-control" name="userPassword" [(ngModel)]="userPassword">
+      </div>
+
+      <div class="btn-container">
+        <div class="errorMsg">{{errorMsg}}</div>
+        <button class="btn btn-dark" (click)="login()">Login</button>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+  <ng-template #t let-fill="fill" let-index="index">
+    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+  </ng-template>
+
+<ngb-rating
+  [(rate)]="rating"
+  [starTemplate]="t"
+  [readonly]="isReadOnly"
+  [max]="5"
+></ngb-rating>

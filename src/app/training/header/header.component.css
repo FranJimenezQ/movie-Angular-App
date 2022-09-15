@@ -1,0 +1,23 @@
+.header-container{
+  width: 100%;
+  height: 80px;
+  background-color: #fdc827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-1{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 5px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.logout{
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 40px;
+  cursor: pointer;
+}

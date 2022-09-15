@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="movie-container">
+  <div class="movie-top">
+    <div class="movie-left">
+      <div class="movie-name">{{ movie?.name }}</div>
+      <div class="movie-rating">
+        <span class="rating-value">{{movie.rating}}</span>
+        <app-star-rating
+        [rating]="movie?.rating"
+        [isReadOnly]="true"
+        ></app-star-rating>
+      </div>
+      <div class="movie-cover">
+        <img [src]="movie?.cover" alt="">
+      </div>
+    </div>
+    <div class="movie-rigth">
+      <div class="rating-title">Please rate this film</div>
+        <div class="rate-form">
+          <div class="form-group">
+            <label for="userName">Your name</label>
+            <input type="text" name="userName">
+          </div>
+          <div class="form-group">
+            <label for="rating">tipy your rate</label>
+            <app-star-rating [rating]="0" [isReadOnly]="false" ></app-star-rating>
+          </div>
+          <div class="form-group">
+            <label for="review">Review</label>
+            <textarea name="review" id="review"  rows="3"></textarea>
+          </div>
+          <div class="btn-container">
+            <button class="btn btn-dark">Submit your rate!</button>
+          </div>
+        </div>
+    </div>
+  </div>
+<div class="movie-bottom">
+    <h4 class="movie-bottom-reviews-title">All the reviews</h4>
+    <div class="movie-reviews" *ngIf="movie?.reviews?.length > 0">
+      <div class="movie-s-review" *ngFor="let review of movie?.reviews">
+        <div class="rev-details">
+          <div class="rev-det-left">
+            <div class="rev-author-name">{{review.author}}</div>
+            <div class="rev-author-det">{{review.published_on | date: "d-MMM-YYYY"}}</div>
+          </div>
+          <div class="rev-det-rigth">
+            <div class="rev-rating">
+              <app-star-rating
+                [rating]="review.rating"
+                [isReadOnly]="true"
+              ></app-star-rating>
+              <span class="rating-value">{{review?.rating}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-text"></div>
+    </div>
+  </div>
+  <div class="movie-reviews">
+    <div class="movie-no-reviews" *ngIf="movie?.reviews?.length === 0">
+      Without a review yet!
+    </div>
+  </div>
+</div>
