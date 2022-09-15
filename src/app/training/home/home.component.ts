@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   getMoviesTheater(){
-    this.http.get('https://franjimenezq.github.io/assets/data/movies-theatre.json')
+    this.http.get('https://franjimenezq.github.io/movie-Angular-App/assets/data/movies-theatre.json')
     .subscribe((movie) => {
       this.theatreMovies = movie;
       console.log(this.theatreMovies)
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   getMoviesTrend(){
-    this.http.get('https://franjimenezq.github.io/assets/data/movies-trending.json')
+    this.http.get('https://franjimenezq.github.io/movie-Angular-App/assets/data/movies-trending.json')
     .subscribe((movie) => {
       this.trendMovies = movie;
       console.log(this.trendMovies)
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   getMoviesPopular(){
-    this.http.get('https://franjimenezq.github.io/assets/data/movies-popular.json')
+    this.http.get('https://franjimenezq.github.io/movie-Angular-App/assets/data/movies-popular.json')
     .subscribe((movie) => {
       this.popularMovies = movie;
       console.log(this.popularMovies)
